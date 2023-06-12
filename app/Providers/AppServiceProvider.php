@@ -32,10 +32,9 @@ class AppServiceProvider extends ServiceProvider
         // Livewire::component('cart-indicator', \app\Http\Livewire\CartIndicator::class);
   
         view()->composer('cat.moder.icart-indicatpr', function ($view) {
-            $posts = 'pula';
+            $posts = 'check';
 
             $view->with('posts1', $posts);
-            $view->with('posts2', $post xxds);
         });
         
     }
