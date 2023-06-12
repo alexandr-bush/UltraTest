@@ -1,6 +1,4 @@
-
-<x-cart-indicator />
-
+<livewire:cart-indicator :cartCount="$cartCount" />
 @foreach ($products as $product)
     <div class="product-card">
         <h3>{{ $product->name }}</h3>
@@ -10,3 +8,4 @@
         <livewire:add-to-cart :product="$product" />
     </div>
 @endforeach
+{{$posts1}}

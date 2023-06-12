@@ -10,7 +10,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::where('active', true)->get();
-
-        return view('products.index', compact('products'));
+        $cartCount = 2;
+        return view('products.index', compact('products','cartCount'));
     }
 }
