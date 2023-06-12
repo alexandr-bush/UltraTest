@@ -6,13 +6,14 @@ use Livewire\Component;
 
 class CartIndicator extends Component
 {
-    public $listeners = ['cartUpdated' => 'render'];
+    // public $listeners = ['cartUpdated' => 'render'];
+
+    public $cartCount;
 
     public function render()
     {
-        $cartCount = 0; // Получите количество товаров в корзине
     
-        return view('livewire.cart-indicator', compact('cartCount'));
+        return view('livewire.cart-indicator');
     }
 }
 
