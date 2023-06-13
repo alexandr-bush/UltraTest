@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '7b2297037d0f06766e87f22599ff9b0db900e705',
+        'reference' => '95deaf95a7c8c993a11b79f1ee30a9f4ec3d4897',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -433,7 +433,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '7b2297037d0f06766e87f22599ff9b0db900e705',
+            'reference' => '95deaf95a7c8c993a11b79f1ee30a9f4ec3d4897',
             'dev_requirement' => false,
         ),
         'laravel/nova' => array(

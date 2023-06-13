@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\ProductController@index');
-Route::get('/cart', [App\Http\Controllers\CartController::class, 'index']);
-
+// Route::get('/', 'App\Http\Controllers\ProductController@index');
+// Route::get('/livewire/cart', [App\Http\Controllers\CartController::class, 'index']);
+Route::get('/', 'App\Http\Livewire\ProductController@index');
+Route::get('/cart', function () {
+    return view('livewire/cart');
+})->name('cart');
 
