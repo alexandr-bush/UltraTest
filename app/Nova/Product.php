@@ -4,6 +4,10 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Product extends Resource
@@ -41,6 +45,13 @@ class Product extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+            Text::make(__('name'), 'name'),
+            Text::make(__('description'), 'description'),
+            Image::make(__('image'), 'image'),
+            Number::make(__('price'), 'price'),
+            Text::make(__('brand'), 'brand'),
+            Number::make(__('quantity'), 'quantity'),
+            Boolean::make(__('active'), 'active'),
         ];
     }
 
@@ -86,5 +97,12 @@ class Product extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+
+    public function index()
+    {
+        $products = Product::all();
+
+        return view('products.index', compact('products'));
     }
 }

@@ -2,21 +2,32 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "doctrine/dbal": "^3.6",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.0",
         "laravel/nova": "^3",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
-        "livewire/livewire": "^2.12"
+        "livewire/livewire": "^2.12",
+        "mytools/cachier": "*"
     },
-    "repositories": [{
-        "type": "composer",
-        "url": "https://laravel-nova.site"
-    }],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://laravel-nova.site"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Cachier"
+        }
+    ],
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

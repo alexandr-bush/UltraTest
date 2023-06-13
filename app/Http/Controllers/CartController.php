@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+
 class CartController extends Controller
 {
     public function index()
     {
-        // Добавьте код для отображения списка продуктов и формы оформления заказа
+        $products = Product::all();
 
-        return view('cart.index');
+        return view('livewire.cart', compact('products'));
     }
 }
